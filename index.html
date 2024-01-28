@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>WebsiteUI</title>
+         <style>
+            body {
+              font-family: Arial, sans-serif;
+              background-color: #f4f4f4;
+              padding: 30px;
+            }
+            .logo-card {
+              background-color: #FFFFFF;
+              border-radius: 10px;
+              padding: 30px;
+              max-width: 600px;
+              margin: 0 auto;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .logo-pic {
+              width: 150px;
+              height: 150px;
+              border-radius: 50%;
+              object-fit: cover;
+              margin-bottom: 20px;
+            }
+            h1 {
+              font-size: 28px;
+              margin-bottom: 20px;
+            }
+            .info {
+              margin-bottom: 20px;
+            }
+            .skills {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+            }
+            .skill {
+              background-color: #f0f0f0;
+              border-radius: 5px;
+              padding: 5px 10px;
+              font-size: 14px;
+              color: #333;
+            }
+           .container-x {
+            display: inline-block;
+         padding: 10px 20px;
+             margin-bottom: 20px
+         font-size: 16px;
+         cursor: pointer;
+         text-align: center;
+         text-decoration: none;
+         outline: none;
+         color: #fff;
+         background-color: #000;
+         border: none;
+         border-radius: 15px;
+         box-shadow: 0 9px #999;
+        
+           }
+           .container-j {
+            display: inline-block;
+         padding: 10px 20px;
+         font-size: 16px;
+         cursor: pointer;
+         text-align: center;
+         text-decoration: none;
+         outline: none;
+         color: #fff;
+         
+
+         </style>
+        </head>
+        <body>
+        <center> <div class="logo-card">
+            <img class="logo-pic" src="https://i.imgur.com/ftrleU4.gif" alt="Logo Picture">
+            <h1>HEIRO AND LIANE WEBSITE 
+            <div class="info">
+                <center>
+              <p><strong>WELCOME TO OUR WEBSITE</strong></p>
+              <p
+
+              <body>
+                  <div id="Background-image">
+            <img src="back.img" alt="">
+        </div>
+              </body>
+              <style>
+        #background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #background-image img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        </style>
+
+        <html>
+        <head>
+        <style>
+        .button {
+         display: inline-block;
+         padding: 10px 20px;
+         font-size: 16px;
+         cursor: pointer;
+         text-align: center;
+         text-decoration: none;
+         outline: none;
+         color: #fff;
+         background-color: #000;
+         border: none;
+         border-radius: 15px;
+         box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #333}
+
+        .button:active {
+         background-color: #333;
+         box-shadow: 0 5px #666;
+         transform: translateY(4px);
+        }
+        </style>
+        </head>
+                      </body>
+              <style>
+        #background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #background-image img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        </style>
+
+        <html>
+        <head>
+        <style>
+        .button {
+         display: inline-block;
+         padding: 10px 20px;
+         font-size: 16px;
+         cursor: pointer;
+         text-align: center;
+         text-decoration: none;
+         outline: none;
+         color: #fff;
+         background-color: #000;
+         border: none;
+         border-radius: 15px;
+         box-shadow: 0 0px #999;
+        }
+
+        .button:hover {background-color: #333}
+
+        .button:active {
+         background-color: #Fff;
+         box-shadow: 0 0px #666;
+         transform: translateY(4px);
+        }
+        </style>
+        <head>
+          <div class="container-j"id="aiList"></div>
+    <center>
+        <div class="skill"></div>
+          <p></p>
+          
+            <h1>Link:</h1>
+            <div class="info">
+         <center>
+             
+             <center>
+                 
+             <a href="https://lianeapi.onrender.com/~" class="button">API'S AND ETC HERE</a
+             </center>
+         
+
+<h1><strong>
+    __________
+</strong></h1>
+            <div class="info">
+         
+         <center>
+             <a href="" class="button">Refresh Domains </a</center>
+            </div>
+
+         
+           
+            <script>
+              window.onload = async () => {
+      const aiList = document.getElementById("aiList");
+      const response2 = await fetch("/api/myai?type=mapped");
+      const myData2 = await response2.json();
+      Object.keys(myData2).forEach(async(key) => {
+        const ai = myData2[key];
+        const [ name, id ] = key.split("@");
+        aiList.innerHTML += `<div class="container-x" onclick="window.location.href = 'https://lianeapi.onrender.com/myai?type=cover&u=${id}&id=${name}'" style="">
+      
+      <div>
+    <b 
+    style="display: inline-block; ${ai.href? 'color: lightblue;' : ai.private? 'color: violet;' : 'color: white;'}">${ai.name_cover}</b>
+    <p style="display: inline-block; opacity: 0.5; margin-left: 5px;" onlick="event.stopPropagation(); window.location.href='/profile@${ai.username}'">@${ai.username}</p>
+    
+</div>
+
+      <p >${ai.description}</p>
+  </div>
+  
+              <br>`;
+        
+      });
+              }
+            </script>
